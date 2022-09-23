@@ -82,16 +82,7 @@ std::list<ModStep> mod_sequence;
 template<typename Automaton>
 bool check(	MinimisationSettings& msettings,Settings& settings, Automaton& a, Automaton& b, Precision<typename Automaton::Weight>& prec) {
 
-  /*
-	typedef ::Automaton<mpfr::mpreal> MPAutomaton ;
-
-	  mpfr::mpreal::set_default_prec(256);
-
-	  mpfr::mpreal absolute_precision =  (check_absolute_precision == 1e-6) ? std::numeric_limits<mpfr::mpreal>::epsilon() : check_absolute_precision; 
-
-	  Precision<mpfr::mpreal> prec(absolute_precision,check_relative_precision);
-  */
-	Automaton c(a);
+  	Automaton c(a);
 	Automaton d(b);
 
 	Automaton diff(c,d);
